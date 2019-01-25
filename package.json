@@ -1,0 +1,39 @@
+{
+  "name": "nsse.wsu.edu",
+  "version": "1.0.0",
+  "description": "WSU website for explaining and promoting the NSSE system to students and faculty.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/invokeImmediately/nsse.wsu.edu.git"
+  },
+  "keywords": [
+    "WSU",
+    "Washington",
+    "State",
+    "University"
+  ],
+  "author": "Daniel Rieck <danielcrieck@gmail.com> (https://www.linkedin.com/in/danielcrieck/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/invokeImmediately/nsse.wsu.edu/issues"
+  },
+  "homepage": "https://github.com/invokeImmediately/nsse.wsu.edu#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-extname": "^0.2.2",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-insert": "^0.5.0",
+    "gulp-insert-lines": "github:invokeImmediately/gulp-insert-lines",
+    "gulp-less": "^4.0.1",
+    "gulp-replace": "^1.0.0",
+    "gulp-uglify": "^3.0.1",
+    "pump": "^3.0.0"
+  },
+  "dependencies": {}
+}
