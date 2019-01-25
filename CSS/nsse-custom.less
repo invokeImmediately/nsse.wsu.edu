@@ -1,0 +1,50 @@
+/**  ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+***  │ FILENAME: nsse-custom.less                                                                   │
+***  │                                                                                              │
+***  │ AUTHOR: Daniel Rieck <daniel.rieck@wsu.edu> (https://github.com/invokeImmediately)           │
+***  │                                                                                              │
+***  │ SUMMARY: Style rules for presenting content on the website for the Washington State          │
+***  │ University (WSU) National Survey of Student Engagement (NSSE) website, which is built using  │
+***  │ the builder template of the Spine parent theme of WSUWP. Styles are designed to accompany or │
+***  │ supersede styling associated with the theme.                                                 │
+***  └──────────────────────────────────────────────────────────────────────────────────────────────┘
+**/
+
+/**  ───────────────────────────────────────────────────────────────────────────────────────────────
+***  TABLE OF CONTENTS:
+***  ────────────────────────────────────────────────────────────────────────────────────────────
+***    §1: Settings for global Less variables..................................................23
+***    §2: Import of OUE-wide style rules......................................................30
+***    §3: Styling at body & page level........................................................44
+***  ───────────────────────────────────────────────────────────────────────────────────────────────
+**/
+
+/*    ----------------------------------------------------------------------------------------------
+**    §1: Settings for global Less variables
+*/
+
+@grid-behavior: "hybrid";
+@oue-rules-wrapper: ~"";
+
+/*    ----------------------------------------------------------------------------------------------
+**    §2: Import of OUE-wide style rules
+*/
+
+@import "..\WSU-UE---CSS\wp-master-style-sheet.less";
+
+/*! ================================================================================================
+*** STYLE RULES SPECIFIC TO THE NSSE WEBSITE
+*** ================================================================================================
+***   GIT REPOSITORY: https://github.com/invokeImmediately/nsse.wsu.edu/
+***     (Please see above git repository for fully documented, precompiled source code.)
+*** ================================================================================================
+**/
+
+/*    ----------------------------------------------------------------------------------------------
+**    §3: Styling at body & page level
+*/
+
+main {
+	background: @hex-white;
+	border-left: 1px solid @hex-bright-gray;
+}
