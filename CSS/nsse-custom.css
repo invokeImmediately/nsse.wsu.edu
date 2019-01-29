@@ -8175,3 +8175,9 @@ h2,
 h3 {
   text-transform: none;
 }
+.main-header {
+  background-color: #981e32;
+}
+.main-header .header-group {
+  max-width: none;
+}
