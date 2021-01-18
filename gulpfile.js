@@ -60,8 +60,8 @@ se see [https://github.com/invokeImmediately/nsse.wsu.edu] for a repository of\
 
 	return new gulpBuilder.CssBuildSettings( {
 		commentRemovalNeedle: /^(?:[ \t]*)?\/\*[^!].*$\n(?:^\*\*?[^/].*$\n)*\*\*?\/\n\n?/gm,
-		dependenciesPath = './WSU-UE---CSS/',
-		destFolder = './CSS/',
+		dependenciesPath: './WSU-DAESA-CSS/',
+		destFolder: './CSS/',
 		fontImportStr: '@import url(\'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wgh' +
 			't@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=PT+Serif:ital,wght@0,400;0,' +
 			'700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Rob' +
@@ -122,7 +122,8 @@ se see [https://github.com/invokeImmediately/nsse.wsu.edu] for a repository of\
 				'stopAfterFirstMatch': true
 		},
 		minCssFileExtension: '.min.css',
-		minCssFileHeaderStr: ''
+		minCssFileHeaderStr: '',
+		sourceFile: './CSS/nsse-custom.less'
 	} );
 }
 
