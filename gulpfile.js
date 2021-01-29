@@ -28,8 +28,8 @@
 // §1: Gulp task dependencies..................................................................40
 // §2: Specificiation of build settings .......................................................45
 //   §2.1: getCssBuildSettings()...............................................................48
-//   §2.2: getJsBuildSettings()...............................................................130
-// §3: Entry point: Set up of build taks......................................................156
+//   §2.2: getJsBuildSettings()...............................................................128
+// §3: Entry point: Set up of build taks......................................................154
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ( function() {
@@ -44,8 +44,8 @@ var gulpBuilder = require( './WSU-DAESA-JS/gulpCssJsBuilder.js' );
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // §2: Specificiation of build settings 
 
-////////
-// §2.1: getCssBuildSettings()
+	////////
+	// §2.1: getCssBuildSettings()
 
 /**
  * Get the settings for a gulp-mediated custom CSS build from Less source files.
@@ -62,10 +62,7 @@ se see [https://github.com/invokeImmediately/nsse.wsu.edu] for a repository of\
 		commentRemovalNeedle: /^(?:[ \t]*)?\/\*[^!].*$\n(?:^\*\*?[^/].*$\n)*\*\*?\/\n\n?/gm,
 		dependenciesPath: './WSU-DAESA-CSS/',
 		destFolder: './CSS/',
-		fontImportStr: '@import url(\'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wgh' +
-			't@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=PT+Serif:ital,wght@0,400;0,' +
-			'700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Rob' +
-			'oto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap\');\r\n',
+		fontImportStr: gulpBuilder.getDaesaFontImportStr(),
 		insertingMediaQuerySectionHeader: {
 				before: /^@media/,
 				lineBefore: '/*! ========================================================================' +
@@ -127,8 +124,8 @@ se see [https://github.com/invokeImmediately/nsse.wsu.edu] for a repository of\
 	} );
 }
 
-////////
-// §2.2: getJsBuildSettings()
+	////////
+	// §2.2: getJsBuildSettings()
 
 /**
  * Get the settings for a gulp-mediated custom JS build.
