@@ -84,11 +84,10 @@ function addPageHeaderOnNewsPages( params ) {
 
 $( function () {
 	addPageHeaderOnNewsPages( {
-		htmlNewsHeader: '<section id="news-section-header" class="row single article-header artic' +
-			'le-header--colored h--192px"><div style="" class="column one black-back"><div class=' +
-			'"gray-er-text wrapper"><ol class="breadcrumb-list"><li class="breadcrumb-list__bread' +
-			'crumb"><a class="breadcrumb-list__link" href="/">NSSE Home</a></li>' +
-			'</ol><h1 class="tt--uppercase">News</h1></div></div></section>'
+		htmlNewsHeader: '<section id="news-section-header" class="row single article-header h--192px"' +
+			'><div style="" class="column one"><div class="wrapper"><ol class="breadcrumb-list"><li cla' +
+			'ss="breadcrumb-list__breadcrumb"><a class="breadcrumb-list__link" href="/">NSSE Home</a></' +
+			'li></ol><h1 class="tt--uppercase">News</h1></div></div></section>'
 	} );
 } );
 
