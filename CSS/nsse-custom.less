@@ -12,12 +12,15 @@
 /**  ───────────────────────────────────────────────────────────────────────────────────────────────
 ***  TABLE OF CONTENTS:
 ***  ────────────────────────────────────────────────────────────────────────────────────────────
-***    §1: Build entry point from DAESA's CSS development project..............................25
-***    §2: Persistent section header comment for unit specific styling.........................34
-***    §3: Styling at body & page level........................................................68
-***    §4: Styling at section level............................................................77
-***      >>> §4.1: Headings....................................................................81
-***      >>> §4.2: Headers.....................................................................91
+***    §1: Build entry point from DAESA's CSS development project..............................28
+***    §2: Persistent section header comment for unit specific styling.........................48
+***    §3: Styling at body & page level........................................................82
+***    §4: Styling at section level...........................................................124
+***      >>> §4.1: Headings...................................................................128
+***      >>> §4.2: Headers....................................................................138
+***    §5: Styling of specific components.....................................................150
+***      >>> §5.1: NSSE Banner Caption........................................................154
+***    §6: Included optional layouts..........................................................167
 ***  ───────────────────────────────────────────────────────────────────────────────────────────────
 **/
 
@@ -25,9 +28,20 @@
 *** §1: Build entry point from DAESA's CSS development project
 **/
 
+// Set Grid behavior to match the Spine theme's hybrid mode.
 @grid-behavior: "hybrid";
+
+// Specify an empty OUE rules wrapping class, as one is not needed on the NSSE website.
 @oue-rules-wrapper: ~"";
+
+// Pull in our default build settings.
 @import "..\WSU-DAESA-CSS\build-settings.less";
+
+// Specify any overrides to the default build settings.
+@use-design__daesa-main-headers: false;
+@use-design__provost-main-headers: true;
+
+// Pull in the custom styling that is used on all DAESA websites.
 @import "..\WSU-DAESA-CSS\build-entry-point.less";
 
 /** ================================================================================================
@@ -64,20 +78,53 @@
 *** ================================================================================================
 **/
 
-/**   ----------------------------------------------------------------------------------------------
-***   §3: Styling at body & page level
+/** ================================================================================================
+*** §3: Overall site branding
 **/
+
+@rs-daesa-overall-branding: {
+	#jacket {
+		background-repeat: no-repeat;
+		background-position: right bottom;
+		background-attachment: fixed;
+	}
+
+	#spine #glue:before {
+		border-right: 1px solid #e5e5e5;
+		background: #fff url(https://s3.wp.wsu.edu/uploads/sites/57/2020/02/bg-spine_daesa.png) no-repeat left bottom;
+		background-attachment: fixed;
+
+		@media only screen and (max-width: 1488px) {
+			background: #fff;
+		}
+	}
+
+	body.home:not(.has-background-image) #jacket, #jacket {
+		background: #e5e5e5 url(https://s3.wp.wsu.edu/uploads/sites/1368/2017/03/bg-jacket-4.jpg) no-repeat right top;
+		background-attachment: fixed;
+	}
+
+	body {
+		background: @hex-bright-gray;
+	}
+
+	main {
+		background: @hex-white;
+		border-left: 1px solid @hex-bright-gray;
+	}
+};
+@rs-daesa-overall-branding();
 
 main {
 	background: @hex-white;
 	border-left: 1px solid @hex-bright-gray;
 }
 
-/**   ----------------------------------------------------------------------------------------------
-***   §4: Styling at section level
+/** ================================================================================================
+*** §4: Styling at section level
 **/
 
-/**   ----------------------------------------------------------------------------------------------
+/**   --------------------------------------------------------------------------------------------
 ***   >>> §4.1: Headings
 **/
 
@@ -87,7 +134,7 @@ h3 {
 	text-transform: none;
 }
 
-/**   ----------------------------------------------------------------------------------------------
+/**   --------------------------------------------------------------------------------------------
 ***   >>> §4.2: Headers
 **/
 
@@ -98,3 +145,26 @@ h3 {
 		max-width: none;
 	}
 }
+
+/** ================================================================================================
+*** §5: Styling of specific components
+**/
+
+/**   --------------------------------------------------------------------------------------------
+***   >>> §5.1: NSSE Banner Caption
+**/
+
+#nsse-banner-caption {
+	.column.one {
+		@media screen and (max-width: @large-mobile-screen-width) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+
+/** ================================================================================================
+*** §6: Included optional layouts
+**/
+
+.use-sectional-article-headers();
