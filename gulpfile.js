@@ -53,11 +53,6 @@ var gulpBuilder = require( './WSU-DAESA-JS/gulpCssJsBuilder.js' );
  * @return {object} - Instance of gulpBuilder.CssBuildSettings.
  */
 function getCssBuildSettings() {
-	minCssFileHeaderStr: '/*! Built with the Less CSS preprocessor [http://lesscss.org/]. Plea\
-se see [https://github.com/invokeImmediately/nsse.wsu.edu] for a repository of\
- source code. */\r\n';
- 	var sourceFile = './CSS/nsse-custom.less';
-
 	return new gulpBuilder.CssBuildSettings( {
 		commentRemovalNeedle: /^(?:[ \t]*)?\/\*[^!].*$\n(?:^\*\*?[^/].*$\n)*\*\*?\/\n\n?/gm,
 		dependenciesPath: './WSU-DAESA-CSS/',
