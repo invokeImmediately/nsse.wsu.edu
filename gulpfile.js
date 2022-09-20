@@ -5,9 +5,11 @@
  *
  * Gulp-mediated automation of custom CSS and JS builds for the WSU NSSE website.
  *
+ * @version 1.0.1
+ *
  * @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
  * @link https://github.com/invokeImmediately/nsse.wsu.edu/blob/master/gulpfile.js
- * @license MIT - Copyright (c) 2021 Washington State University
+ * @license MIT - Copyright (c) 2022 Washington State University
  *   Permission is hereby granted, free of charge, to any person obtaining a copy of this software
  *     and associated documentation files (the “Software”), to deal in the Software without
  *     restriction, including without limitation the rights to use, copy, modify, merge, publish,
@@ -25,11 +27,11 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // TABLE OF CONTENTS
 // -----------------
-// §1: Gulp task dependencies..................................................................40
-// §2: Specificiation of build settings .......................................................45
-//   §2.1: getCssBuildSettings()...............................................................48
-//   §2.2: getJsBuildSettings()...............................................................128
-// §3: Entry point: Set up of build taks......................................................154
+// §1: Gulp task dependencies..................................................................42
+// §2: Specification of build settings ........................................................47
+//   §2.1: getCssBuildSettings()...............................................................50
+//   §2.2: getJsBuildSettings()...............................................................125
+// §3: Entry point: Set up of build taks......................................................151
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ( function() {
@@ -42,7 +44,7 @@
 var gulpBuilder = require( './WSU-DAESA-JS/gulpCssJsBuilder.js' );
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-// §2: Specificiation of build settings 
+// §2: Specification of build settings 
 
 	////////
 	// §2.1: getCssBuildSettings()
@@ -115,7 +117,7 @@ function getCssBuildSettings() {
 		},
 		minCssFileExtension: '.min.css',
 		minCssFileHeaderStr: '',
-		sourceFile: './CSS/nsse-custom.less'
+		sourceFile: './CSS/wsuwp-spine_cust-ss-ed-src.less'
 	} );
 }
 
